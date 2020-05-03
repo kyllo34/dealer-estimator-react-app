@@ -1,0 +1,13 @@
+.Header {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  height: 60px;
+  padding: 5px;
+  .header-logo {
+    height: 100%
+  }
+  .user-block {
+    color: white;
+  }
+}
