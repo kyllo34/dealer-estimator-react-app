@@ -1,23 +1,22 @@
 import React from 'react';
 import './CustomerBar.scss';
-import { useForm } from 'react-hook-form'
-import { Form, Col, Button } from 'react-bootstrap';
+import { Form, Col } from 'react-bootstrap';
 
 let states = [ "AK","AL","AR","AS","AZ","CA","CO","CT","DC","DE","FL","GA","GU","HI","IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI","MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV","NY","OH","OK","OR","PA","PR","RI","SC","SD","TN","TX","UT","VA","VI","VT","WA","WI","WV","WY"]
 
 const CustomerBar = () => {
   return (
     <div className="Customer-Bar">
-      <div className="customer-info">Customer Info:</div>
+      <div className="customer-info">Customer:</div>
       <Form>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridFirstName">
             <Form.Label>First Name</Form.Label>
-            <Form.Control type="text" placeholder="Enter First Name" />
+            <Form.Control type="text" placeholder="John" />
           </Form.Group>
           <Form.Group as={Col} controlId="formGridLastName">
             <Form.Label>Last Name</Form.Label>
-            <Form.Control type="text" placeholder="Enter Last Name" />
+            <Form.Control type="text" placeholder="Smith" />
           </Form.Group>
         </Form.Row>
 
