@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../../assets/logo.png'
 import './Header.scss'
-import {PersonSquare} from 'react-bootstrap-icons';
+import { PersonSquare } from 'react-bootstrap-icons';
 
 const Header = () => {
   return (
