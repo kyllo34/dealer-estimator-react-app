@@ -4,6 +4,7 @@ import Header from '../Header';
 import DealerBar from '../DealerBar';
 import CustomerBar from '../CustomerBar';
 import VehicleBar from '../VehicleBar';
+import EstimateTable from '../EstimateTable';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <DealerBar />
       <CustomerBar />
       <VehicleBar />
+      <EstimateTable />
     </div>
   );
 }

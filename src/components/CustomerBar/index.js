@@ -14,6 +14,7 @@ const CustomerBar = () => {
             <Form.Label>First Name</Form.Label>
             <Form.Control type="text" placeholder="John" />
           </Form.Group>
+
           <Form.Group as={Col} controlId="formGridLastName">
             <Form.Label>Last Name</Form.Label>
             <Form.Control type="text" placeholder="Smith" />
@@ -24,6 +25,7 @@ const CustomerBar = () => {
           <Form.Label>Address</Form.Label>
           <Form.Control placeholder="1234 Main St" />
         </Form.Group>
+
         <Form.Group controlId="formGridAddress2">
           <Form.Label>Address 2</Form.Label>
           <Form.Control placeholder="Apartment, studio, or floor" />
