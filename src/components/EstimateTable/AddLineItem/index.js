@@ -1,5 +1,5 @@
 import React from 'react';
-import './AddPart.scss'
+import './AddLineItem.scss'
 import { connect } from 'react-redux'
 import { PlusSquareFill } from 'react-bootstrap-icons';
 
@@ -9,9 +9,9 @@ const mapStateToProps = (state) => {
   }
 }
 
-const AddPart = () => {
+const AddLineItem = () => {
   return (
-      <tr className= "Add-Part">
+      <tr className= "Add-Line-Item">
         <td></td>
         <td><input type="text" placeholder="Description" /></td>
         <td><input type="number" min="0" step="0.01" placeholder="Cost" /></td>
@@ -26,4 +26,4 @@ const AddPart = () => {
   )
 }
 
-export default connect(mapStateToProps)(AddPart);
+export default connect(mapStateToProps)(AddLineItem);

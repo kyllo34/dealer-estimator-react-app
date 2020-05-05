@@ -2,7 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Table } from 'react-bootstrap';
 import './EstimateTable.scss'
-import AddPart from './AddPart';
+import AddLineItem from './AddLineItem';
+import LineItem from './LineItem';
 
 const mapStateToProps = state => {
   return {
@@ -30,21 +31,9 @@ const EstimateTable = ({ lineItems }) => {
           </thead>
           <tbody>
             {lineItems.map((lineItem, index) => (
-              <tr>
-                <th key={index}>{index}</th>
-                <th>Part Description</th>
-                <th>Cost</th>
-                <th>Quantity</th>
-                <th>Part Number</th>
-                <th>Cost</th>
-                <th>Hours of Labor</th>
-                <th>Labor Cost</th>
-                <th>Total Cost</th>
-                <th></th>
-              </tr>
-
+              <LineItem lineItem={lineItem} index={index} />
             ))}
-            <AddPart />
+            <AddLineItem />
           </tbody>
         </Table>
     </div>
