@@ -11,3 +11,17 @@ function createLineItemAction(lineItem) {
     payload: lineItem
   }
 }
+
+// UPDATE A LINE ITEM
+export function updateLineItem(lineItem) {
+  return async function(dispatch) {
+    return dispatch(updateLineItemAction(lineItem))
+  }
+}
+
+function updateLineItemAction(lineItem) {
+  return {
+    type: 'UPDATE_LINE_ITEM',
+    payload: lineItem
+  }
+}

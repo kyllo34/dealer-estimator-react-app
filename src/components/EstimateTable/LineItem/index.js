@@ -1,11 +1,23 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { XCircleFill } from 'react-bootstrap-icons';
+import { updateLineItem } from '../../../actions'
 
-const LineItem = ({ index, lineItem }) => {
+const mapStateToProps = state => {
+  return {
+    lineItems: state.lineItems,
+  }
+}
+
+const mapDispatchToProps = {
+  updateLineItem
+}
+
+const LineItem = ({ index, lineItem, updateLineItem }) => {
   return (
     <tr key={index}>
       <th>{index + 1}</th>
-      <th><input type="text" placeholder="Description" defaultValue={lineItem.description} /></th>
+      <th><input type="text" placeholder="Description" defaultValue={lineItem.description} onInput={e => updateLineItem({_id: lineItem._id, property:'description', value: e.target.value})}/></th>
       <th>$<input type="number" min="0" step="0.01" placeholder="Cost" defaultValue={lineItem.partCost}/></th>
       <th><input type="number" min="0" step="1" placeholder="Quantity" defaultValue={lineItem.quantity}/></th>
       <th>{lineItem.partNumber}</th>
@@ -18,4 +30,4 @@ const LineItem = ({ index, lineItem }) => {
   )
 }
 
-export default LineItem
+export default connect(mapStateToProps, mapDispatchToProps)(LineItem)

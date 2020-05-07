@@ -31,7 +31,7 @@ const EstimateTable = ({ lineItems }) => {
           </thead>
           <tbody>
             {lineItems.map((lineItem, index) => (
-              <LineItem lineItem={lineItem} index={index} />
+              <LineItem lineItem={lineItem} index={index} key={lineItem._id} />
             ))}
             <AddLineItem index={lineItems.length + 1} />
           </tbody>
