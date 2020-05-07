@@ -14,11 +14,11 @@ I worked as a service advisor at an Audi dealership for 8 years and had to provi
 
 ## Project Screen Shots
 
-![Logo](../master/assets/small-logo.jpg)
-![Header](../master/assets/header.jpg)
-![Dealer Bar](../master/assets/dealer-bar/jpg)
-![Customer Bar](../master/assets/customer-bar.jpg)
-![Line Items](../master/assets/line-items.jpg)
+![Logo](../master/src/assets/small-logo.jpg)
+![Header](../master/src/assets/header.jpg)
+![Dealer Bar](../master/src/assets/dealer-bar/jpg)
+![Customer Bar](../master/src/assets/customer-bar.jpg)
+![Line Items](../master/src/assets/line-items.jpg)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
