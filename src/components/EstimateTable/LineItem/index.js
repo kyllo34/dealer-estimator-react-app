@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { XCircleFill } from 'react-bootstrap-icons';
-import { updateLineItem, deleteLineItem } from '../../../actions'
+import { XCircleFill, PlusCircleFill } from 'react-bootstrap-icons';
+import { updateLineItem, deleteLineItem, createLineItem } from '../../../actions'
 
 const mapStateToProps = state => {
   return {
@@ -11,10 +11,11 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = {
   updateLineItem,
-  deleteLineItem
+  deleteLineItem,
+  createLineItem
 }
 
-const LineItem = ({ index, lineItem, updateLineItem, deleteLineItem }) => {
+const LineItem = ({ index, lineItem, updateLineItem, deleteLineItem, createLineItem, lineItems }) => {
   return (
     <tr key={index}>
       <th>{index + 1}</th>
@@ -26,7 +27,12 @@ const LineItem = ({ index, lineItem, updateLineItem, deleteLineItem }) => {
       <th><input type="number" min="0" step="1" placeholder="Labor" defaultValue={lineItem.laborHours} onInput={e => updateLineItem({_id: lineItem._id, property:'laborHours', value: e.target.value})} /></th>
       <th>${lineItem.laborHours * 160}</th>
       <th>${lineItem.partCost * lineItem.quantity + lineItem.laborHours * 160}</th>
-      <th><XCircleFill role="button" onClick={() => deleteLineItem(lineItem._id)}/></th>
+      <th>
+        {index === lineItems.length - 1 
+          ? <PlusCircleFill role="button" onClick={createLineItem} />
+          : <XCircleFill role="button" onClick={() => deleteLineItem(lineItem._id)}/>
+        }
+      </th>
     </tr> 
   )
 }

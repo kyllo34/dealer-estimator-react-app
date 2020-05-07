@@ -1,4 +1,4 @@
-// CREATE A NEW LINE ITEM
+// CREATE AN EMPTY OBJECT IN THE LINEITEMS STATE
 export function createLineItem() {
   return {
     type: 'CREATE_LINE_ITEM',
