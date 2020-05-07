@@ -1,3 +1,25 @@
+# Dealer Estimator
+
+## Description
+
+This is a React application to render vehicle work estimates in a clean and asthetically pleasing format. This app is designed for auto mechanic service advisors. Using React-Redux the user will be able to dynamically change individual fields for each line item. This app will eventually use Google Places API to predict customer addresses. This app will eventually connect to an API to store all estimates, customer, and, vehicle data in a database.
+
+## Project Status
+
+This project is currently in development. Users can Add, update, and delete line items. Login and authentication functionality is in progress.
+
+## Reflection
+
+I worked as a service advisor at an Audi dealership for 8 years and had to provide many written and verbale estimates to customers every day and found the provided programs to be very old, slow, and full of bugs. I obtained a certificate for Advanced Software Development in JavaScript in April of 2020 and decided to create an aesthetically pleasing and fully functional React-Redux based work estimator for my old coworkers that will eventually include an API and database for data persistance and user authentication. I will also implement the NHTSA's API to populate vehicle data when a VIN is entered. I will implement Google Place's API to predict client addresses. 
+
+## Project Screen Shots
+
+![Logo](../master/assets/small-logo.jpg)
+![Header](../master/assets/header.jpg)
+![Dealer Bar](../master/assets/dealer-bar/jpg)
+![Customer Bar](../master/assets/customer-bar.jpg)
+![Line Items](../master/assets/line-items.jpg)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
