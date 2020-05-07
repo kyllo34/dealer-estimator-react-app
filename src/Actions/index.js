@@ -1,27 +1,22 @@
 // CREATE A NEW LINE ITEM
-export function createLineItem(lineItem) {
-  return async function(dispatch) {
-    return dispatch(createLineItemAction(lineItem))
-  }
-}
-
-function createLineItemAction(lineItem) {
+export function createLineItem() {
   return {
     type: 'CREATE_LINE_ITEM',
-    payload: lineItem
   }
 }
 
 // UPDATE A LINE ITEM
 export function updateLineItem(lineItem) {
-  return async function(dispatch) {
-    return dispatch(updateLineItemAction(lineItem))
-  }
-}
-
-function updateLineItemAction(lineItem) {
   return {
     type: 'UPDATE_LINE_ITEM',
     payload: lineItem
+  }
+}
+
+// DELETE A LINE ITEM
+export function deleteLineItem(id) {
+  return {
+    type: 'DELETE_LINE_ITEM',
+    payload: id
   }
 }

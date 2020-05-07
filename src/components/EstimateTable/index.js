@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Table } from 'react-bootstrap';
 import './EstimateTable.scss'
-import AddLineItem from './AddLineItem';
 import LineItem from './LineItem';
 
 const mapStateToProps = state => {
@@ -33,7 +32,6 @@ const EstimateTable = ({ lineItems }) => {
             {lineItems.map((lineItem, index) => (
               <LineItem lineItem={lineItem} index={index} key={lineItem._id} />
             ))}
-            <AddLineItem index={lineItems.length + 1} />
           </tbody>
         </Table>
     </div>
