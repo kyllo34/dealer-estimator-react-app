@@ -1,7 +1,5 @@
 # Dealer Estimator
 
-## Description
-
 This is a React application to render vehicle work estimates in a clean and asthetically pleasing format. This app is designed for auto mechanic service advisors. Using React-Redux the user will be able to dynamically change individual fields for each line item. This app will eventually use Google Places API to predict customer addresses. This app will eventually connect to an API to store all estimates, customer, and, vehicle data in a database.
 
 ## Project Status
