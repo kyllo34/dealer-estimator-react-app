@@ -9,7 +9,7 @@ lineItems.push({
   laborHours: 24,
 },
 {
-  _id: lineItems.length,
+  _id: lineItems.length + 2,
   description: "",
   partCost: 0,
   quantity: 0,
@@ -19,12 +19,12 @@ lineItems.push({
 
 
 const lineItem = (state = lineItems, action) => {
-  console.log(state)
+  console.log(state.length)
   switch (action.type) {
 // ADDS AN EMPTY LINE ITEM OBJECT TO THE STATE
     case "CREATE_LINE_ITEM":
       const emptyLineItem = {
-        _id: lineItems.length,
+        _id: state.length + 1,
         description: "",
         partCost: 0,
         quantity: 0,
