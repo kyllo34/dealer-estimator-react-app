@@ -1,0 +1,8 @@
+{
+  "lineItems": [
+    { "id":1,"description":"Motor","partCost":23450 ,"quantity":1,"partNumber":"123-45-1245","laborHours":15 },
+    { "id":2 ,"description":"screw" ,"partCost": 4.57,"quantity": 37,"partNumber": "123-45-195","laborHours":0 },
+    { "id":3 ,"description":"5W40 SAE" ,"partCost":5.48 ,"quantity": 12,"partNumber":"asd-123-g-f-s-a" ,"laborHours":0.75 },
+    { "id":4 ,"description":" Driver Motor Mount" ,"partCost":85.50 ,"quantity":1 ,"partNumber":"gksks-55-asdf" ,"laborHours":2.75 }
+  ]
+}
