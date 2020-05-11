@@ -1,6 +1,6 @@
 import React from 'react';
 import './DealerBar.scss'
-import dealerLogo from '../../assets/Audi.png'
+import dealerLogo from '../../assets/audi.png'
 
 const DealerBar = () => {
   return (

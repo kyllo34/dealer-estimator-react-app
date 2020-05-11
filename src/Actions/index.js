@@ -5,6 +5,22 @@ export function createLineItem() {
   }
 }
 
+// GETS ALL LINE ITEMS 
+export function getAllLineItems() {
+  return async function(dispatch) {
+    const raw = await fetch('http://localhost:3001/lineItems');
+    const data = await raw.json();
+    return dispatch(getAllLineItemsAction(data))
+  }
+}
+
+function getAllLineItemsAction(data) {
+  return {
+    type: 'GET_ALL_LINE_ITEMS',
+    payload: data
+  }
+}
+
 // UPDATE A LINE ITEM
 export function updateLineItem(lineItem) {
   return {
@@ -12,6 +28,7 @@ export function updateLineItem(lineItem) {
     payload: lineItem
   }
 }
+
 
 // DELETE A LINE ITEM
 export function deleteLineItem(id) {

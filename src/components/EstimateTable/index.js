@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Table } from 'react-bootstrap';
 import './EstimateTable.scss'
 import LineItem from './LineItem';
+import { getAllLineItems } from '../../actions';
 
 const mapStateToProps = state => {
   return {
     lineItems: state.lineItems
-  }
-}
+  };
+};
 
-const EstimateTable = ({ lineItems }) => {
+const mapDispatchToProps = { getAllLineItems };
+
+const EstimateTable = ({ lineItems, getAllLineItems }) => {
+  const lineItemFetcher = function() {
+    getAllLineItems();
+  }
+  useEffect(() => lineItemFetcher(), []) //eslint-disable-line
   return (
     <div className="Estimate-Table">
         <Table striped bordered hover variant="dark">
@@ -30,7 +37,7 @@ const EstimateTable = ({ lineItems }) => {
           </thead>
           <tbody>
             {lineItems.map((lineItem, index) => (
-              <LineItem lineItem={lineItem} index={index} key={lineItem._id} />
+              <LineItem lineItem={lineItem} index={index} key={lineItem.id} />
             ))}
           </tbody>
         </Table>
@@ -38,4 +45,4 @@ const EstimateTable = ({ lineItems }) => {
   )
 }
 
-export default connect(mapStateToProps)(EstimateTable);
+export default connect(mapStateToProps, mapDispatchToProps)(EstimateTable);
